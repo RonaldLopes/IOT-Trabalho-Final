@@ -1,13 +1,13 @@
-#include "gpio_init.h"
 
 #define TOPICOSENSORIN "/medidores/input"
 #define TOPICOOUT "/data/output"
 
 //
-//FunÃ§Ã£o: Trata o valor do Topico
-//ParÃ¢metros: nenhum
+//Funcao: Trata o valor do Topico
+//Parametros: nenhum
 //Retorno: nenhum
-void trataTopico(char* topic,String msg){
+void trataTopico(char* topic,String msg)
+{
 
     //
     // if (strcmp(topic,TOPICOLAMP1)==0){
