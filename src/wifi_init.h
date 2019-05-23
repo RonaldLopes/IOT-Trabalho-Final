@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>  //essa biblioteca ja vem com a IDE. Portanto, nao e preciso baixar nenhuma biblioteca adicional
 //defines
-#define SSID_REDE     "CENSANETWIFI-BBD0"  //coloque aqui o nome da rede que se deseja conectar
-#define SENHA_REDE    "9753186420"  //coloque aqui a senha da rede que se deseja conectar
+#define SSID_REDE     "saeg2019"  //coloque aqui o nome da rede que se deseja conectar
+#define SENHA_REDE    "semsenha"  //coloque aqui a senha da rede que se deseja conectar
 //constantes e variaveis globais
 WiFiClient wifiClient;
 //assinatura

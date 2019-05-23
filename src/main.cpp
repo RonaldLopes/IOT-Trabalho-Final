@@ -3,14 +3,16 @@
 #include <dht_handle.h>
 #include <json_handle.h>
 #include <ldr_handle.h>
+#include <rele_handle.h>
 #include "wifi_init.h"
 #include "mqtt_init.h"
 
-void setup() 
+void setup()
 {
     Serial.begin(115200);
     inicializaDHT();
     inicializaLDR();
+    inicializaRele();
     delay(1000);
     if (conectaWiFi())
     {
@@ -23,7 +25,7 @@ void setup()
     }
 }
 
-void loop() 
+void loop()
 {
     uint8_t luminosidade;
     float umidade_dht11;
@@ -39,10 +41,11 @@ void loop()
     //LDR
     luminosidade = leLDR();
     imprimeDadosLDR(luminosidade);
+    atuaRele(true);
     delay(1000);
     if(WiFi.status() == WL_CONNECTED)
     {
-        if (!MQTTClient.connected()) 
+        if (!MQTTClient.connected())
             connectaClienteMQTT();
         if(flagLeituraDHT)
             publicaMensagem(TOPICOSENSORIN,createJson(temperatura_dht11,umidade_dht11));
@@ -53,5 +56,7 @@ void loop()
             iniciaMQTT();
         delay(500);
     }
-}
 
+    atuaRele(false);
+    delay(1000);
+}

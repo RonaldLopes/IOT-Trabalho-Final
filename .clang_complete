@@ -14,6 +14,7 @@
 -I/home/ronald/Documents/PlatformIO/Projects/iotMqqtJson/lib/DallasTemperature
 -I/home/ronald/Documents/PlatformIO/Projects/iotMqqtJson/lib/OneWire
 -I/home/ronald/Documents/PlatformIO/Projects/iotMqqtJson/lib/higrometro_handle
+-I/home/ronald/Documents/PlatformIO/Projects/iotMqqtJson/lib/rele_handle
 -I/home/ronald/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA
 -I/home/ronald/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src
 -I/home/ronald/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM
