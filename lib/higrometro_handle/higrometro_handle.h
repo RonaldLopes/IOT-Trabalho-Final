@@ -2,4 +2,4 @@
 #include <Arduino.h>
 #define PINO_HIGROMETRO D7
 void  inicializaHigrometro();
-boolean leituraHigrometro();
+bool leituraHigrometro();

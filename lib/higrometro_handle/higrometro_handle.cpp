@@ -1,8 +1,8 @@
-#include <higrometro.h>
+#include <higrometro_handle.h>
 
 void inicializaHigrometro(){
   pinMode(PINO_HIGROMETRO,INPUT);
 }
-boolean leituraHigrometro(){
+bool leituraHigrometro(){
   return digitalRead(PINO_HIGROMETRO);
 }

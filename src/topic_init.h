@@ -1,6 +1,6 @@
 
 #define TOPICOSENSORIN "/medidores/input"
-#define TOPICOOUT "/data/output"
+#define TOPICOOUT "/medidores/output"
 
 //
 //Funcao: Trata o valor do Topico
@@ -8,35 +8,14 @@
 //Retorno: nenhum
 void trataTopico(char* topic,String msg)
 {
-
-    //
-    // if (strcmp(topic,TOPICOLAMP1)==0){
-    //   if(msg.equals("1")){
-    //     staLed1 = HIGH;
-    //   }
-    //   if(msg.equals("0")){
-    //     staLed1 = LOW;
-    //   }
-    // }
-    //
-    // if (strcmp(topic,TOPICOLAMP2)==0){
-    //   if(msg.equals("1")){
-    //     staLed2 = HIGH;
-    //   }
-    //   if(msg.equals("0")){
-    //     staLed2 = LOW;
-    //   }
-    // }
-    //
-    //
-    // Serial.print("Led Topico 1:");
-    // Serial.println(staLed1);
-    //
-    // Serial.print("Led Topico 2:");
-    // Serial.println(staLed2);
-    //
-    //
-    // digitalWrite(ledTop1, staLed1);
-    // digitalWrite(ledTop2, staLed2);
-
+    if (strcmp(topic,TOPICOOUT)==0)
+    {
+        if(msg.equals("true"))
+            atuaRele(true);
+        if(msg.equals("false"))
+            atuaRele(false);
+    }
+    Serial.print(msg);
+    Serial.println();
+    Serial.println(topic);
 }

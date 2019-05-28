@@ -1,2 +1,2 @@
 #include <ArduinoJson.h>
-char* createJson(float temperatura, float umidade);
+char* createJson(float , float, uint8_t, bool);

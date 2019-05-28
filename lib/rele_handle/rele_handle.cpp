@@ -10,7 +10,7 @@ void inicializaRele()
 
 void atuaRele(boolean estado)
 {
-    if(estado == ACENDE)
+    if(estado == APAGA)
       digitalWrite(PINO_RELE,LOW);
     else
       digitalWrite(PINO_RELE,HIGH);

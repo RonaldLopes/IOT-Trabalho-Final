@@ -30,6 +30,7 @@ void connectaClienteMQTT(void) {
     if( MQTTClient.connect(clientId.c_str(), MQTT_USER, MQTT_PASS )) 
     {
       Serial.println("Cliente MQTT conectado: "+clientId);
+      MQTTClient.subscribe(TOPICOOUT);
     }else
     {
       Serial.print("Falha, rc=");
