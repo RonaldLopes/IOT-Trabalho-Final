@@ -10,9 +10,9 @@ void trataTopico(char* topic,String msg)
 {
     if (strcmp(topic,TOPICOOUT)==0)
     {
-        if(msg.equals("true"))
+        if(msg.equals("{\"valor\":\"true\"}"))
             atuaRele(true);
-        if(msg.equals("false"))
+        if(msg.equals("{\"valor\":\"false\"}"))
             atuaRele(false);
     }
     Serial.print(msg);
