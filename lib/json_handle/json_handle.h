@@ -1,2 +1,2 @@
 #include <ArduinoJson.h>
-char* createJson(float , float, uint8_t, bool);
+char* createJson(float , float, int, bool);

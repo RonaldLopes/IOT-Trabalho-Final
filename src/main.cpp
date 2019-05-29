@@ -62,5 +62,5 @@ void loop()
             iniciaMQTT();
         delay(500);
     }
-    delay(100);
+    delay(1000);
 }

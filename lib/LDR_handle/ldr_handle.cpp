@@ -7,17 +7,11 @@ void inicializaLDR()
     pinMode(LDR_PIN, INPUT);
 }
 
-uint8_t leLDR()
+int leLDR()
 {
-    uint16_t valor;
+    int valor;
     valor = analogRead(LDR_PIN);
-    return transformaLuminosidade(valor);
-}
-
-uint8_t transformaLuminosidade(uint16_t valor)// Precisa ser implementada
-{
-    uint8_t porcentagem = valor;
-    return porcentagem;
+    return valor;
 }
 
 void imprimeDadosLDR(uint8_t luminosidade)

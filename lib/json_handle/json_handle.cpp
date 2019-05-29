@@ -1,6 +1,6 @@
 #include "json_handle.h"
 
-char* createJson(float temperatura, float umidadeAr, uint8_t luminosidade, bool umidadeSolo)
+char* createJson(float temperatura, float umidadeAr, int luminosidade, bool umidadeSolo)
 {
     StaticJsonDocument<500> doc;
     doc["Temperatura"] = temperatura;
